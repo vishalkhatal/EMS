@@ -61,12 +61,12 @@ namespace EMS.SERVICES
         {
             if (occasion == Occasions.Birthday)
             {
-                var employee = db.Employees.Where(x=>x.DateOfBirth.Date==DateTime.Today.Date).ToList();
+                var employee = db.Employees.Where(x=>x.DateOfBirth.Day==DateTime.Today.Day && x.DateOfBirth.Month == DateTime.Today.Month).ToList();
                 return employee;
             }
             else
             {
-                var employee = db.Employees.Where(x => x.DateOfJoining.Date == DateTime.Today.Date).ToList();
+                var employee = db.Employees.Where(x => x.DateOfJoining.Day == DateTime.Today.Day && x.DateOfJoining.Month == DateTime.Today.Month).ToList();
                 return employee;
             }
         }

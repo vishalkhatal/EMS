@@ -17,13 +17,20 @@ namespace EMS.BirthDayWisher
         private string SendGridApiKey = ConfigurationSettings.AppSettings["SendGridApiKey"];
         public async void SendEmail(List<Employee> employees, Occasions occassion)
         {
-            if (employees.Count != 0)
+            try
             {
-                foreach (Employee e in employees)
+                if (employees.Count != 0)
                 {
-                    var email = CreateEmail(e, occassion);
-                    await SendEmail(email).ConfigureAwait(false);
+                    foreach (Employee e in employees)
+                    {
+                        var email = CreateEmail(e, occassion);
+                        await SendEmail(email);
+                    }
                 }
+            }
+            catch(Exception ex)
+            {
+                // logger
             }
         }
 
@@ -39,7 +46,7 @@ namespace EMS.BirthDayWisher
             var msg = new SendGridMessage();
             msg.SetFrom(new EmailAddress(ConfigurationSettings.AppSettings["FromAddress"], "EAS Fun Team"));
 
-            msg.AddTo(e.Alias);
+            msg.AddTo($"{e.Alias}@microsoft.com");
             //List<string> EmailsForBCC = new List<string>(_alias);
             //EmailsForBCC.Remove(e.Alias);
 
