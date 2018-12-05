@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using EMS.Models;
 using Microsoft.Azure.WebJobs;
 
 namespace EMS.BirthDayWisher
@@ -14,16 +15,9 @@ namespace EMS.BirthDayWisher
         // AzureWebJobsDashboard and AzureWebJobsStorage
         static void Main()
         {
-            var config = new JobHostConfiguration();
 
-            if (config.IsDevelopment)
-            {
-                config.UseDevelopmentSettings();
-            }
-
-            var host = new JobHost(config);
-            // The following code ensures that the WebJob will be running continuously
-            host.RunAndBlock();
+            ExecuteDaily.SendEmails(Occasions.Birthday);
+            ExecuteDaily.SendEmails(Occasions.Anniversary);
         }
     }
 }

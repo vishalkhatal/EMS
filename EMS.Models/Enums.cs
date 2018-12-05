@@ -11,4 +11,9 @@ namespace EMS.Models
         Male = 0,
         Female = 1
     }
+    public enum Occasions
+    {
+        Birthday=0,
+        Anniversary=1
+    }
 }

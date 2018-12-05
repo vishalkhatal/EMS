@@ -57,5 +57,23 @@ namespace EMS.SERVICES
                 return false;
             }
         }
+        public List<Employee> GetEmployeesByOccassion(Occasions occasion)
+        {
+            if (occasion == Occasions.Birthday)
+            {
+                var employee = db.Employees.Where(x=>x.DateOfBirth.Date==DateTime.Today.Date).ToList();
+                return employee;
+            }
+            else
+            {
+                var employee = db.Employees.Where(x => x.DateOfJoining.Date == DateTime.Today.Date).ToList();
+                return employee;
+            }
+        }
+        public List<string> GetAllEmployeesAlias()
+        {
+            var alias = db.Employees.Select(x => x.Alias).ToList();
+            return alias;
+        }
     }
 }
