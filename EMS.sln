@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMS.DAL", "EMS.DAL\EMS.DAL.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMS.SERVICES", "EMS.SERVICES\EMS.SERVICES.csproj", "{398FE0F2-2698-48D7-A521-F11415A8D465}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMS.BirthDayWisher", "EMS.BirthDayWisher\EMS.BirthDayWisher.csproj", "{740F2A95-6296-4148-8E5B-EF6C1AC8C7EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{398FE0F2-2698-48D7-A521-F11415A8D465}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{398FE0F2-2698-48D7-A521-F11415A8D465}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{398FE0F2-2698-48D7-A521-F11415A8D465}.Release|Any CPU.Build.0 = Release|Any CPU
+		{740F2A95-6296-4148-8E5B-EF6C1AC8C7EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{740F2A95-6296-4148-8E5B-EF6C1AC8C7EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{740F2A95-6296-4148-8E5B-EF6C1AC8C7EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{740F2A95-6296-4148-8E5B-EF6C1AC8C7EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
