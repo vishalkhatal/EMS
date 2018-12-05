@@ -1,4 +1,5 @@
-﻿using EMS.Models;
+﻿using EMS.DAL.Migrations;
+using EMS.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -14,7 +15,7 @@ namespace EMS.DAL
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            //Database.SetInitializer(new MigrateDatabaseToLatestVersion<ApplicationDbContext, Configuration>());
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<EMSContext, Configuration>());
         }
 
     }
