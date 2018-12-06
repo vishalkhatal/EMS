@@ -66,6 +66,7 @@ namespace EMS.SERVICES
             }
             else
             {
+                //var employee = db.Employees.ToList();
                 var employee = db.Employees.Where(x => x.DateOfJoining.Day == DateTime.Today.Day && x.DateOfJoining.Month == DateTime.Today.Month).ToList();
                 return employee;
             }
